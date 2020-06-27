@@ -1,0 +1,32 @@
+/*Para que un cuadro texto tenga mayor alto*/
+.cajaTextoAlta{
+    height:120px;
+}
+/*Para estirar la imagen de prueba*/
+.imgSlider {
+    width: 100%;
+    height: 300px;
+}
+
+/*Para dar color a las flechas del slider*/
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  height: 100px;
+  width: 100px;
+  background-size: 100%, 100%;
+  background-image: none;
+}
+
+.carousel-control-next-icon:after
+{
+  content: '>';
+  font-size: 55px;
+  color: #646464;
+}
+
+.carousel-control-prev-icon:after {
+  content: '<';
+  font-size: 55px;
+  color: #646464;
+}
+/*Fin color flechas slider*/

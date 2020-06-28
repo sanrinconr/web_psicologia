@@ -1,5 +1,16 @@
 $(function() {
+ /*Si llega contactenos desde enfermedades*/
+ $.urlParam = function(name) {
+  var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
+  if (results == null) {
+   return null;
+  }
+  return decodeURI(results[1]) || 0;
+ }
 
+ if($.urlParam('vista') == "contactenos"){
+   desplazamientoContactenos();
+ }
  /*Redirecciones*/
  $("#btnVolverPaginaPrincipal").click(function() {
   window.location = "index.html";
@@ -36,10 +47,8 @@ $(function() {
  });
 
  /*IR al final de la pagina*/
- $('#btnContactenos').click(function(){
-   $('html, body').animate({
-       scrollTop: $('#endOfPage').offset().top
-   }, 1000);
+ $('#btnContactenos').click(function() {
+   desplazamientoContactenos();
  });
 });
 
@@ -64,4 +73,10 @@ function validarContactoInteres() {
 function validateEmail(email) {
  var re = /\S+@\S+\.\S+/;
  return re.test(email);
+}
+
+function desplazamientoContactenos(){
+  $('html, body').animate({
+   scrollTop: $('#endOfPage').offset().top
+  }, 1000);
 }

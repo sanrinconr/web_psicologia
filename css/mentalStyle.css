@@ -2,3 +2,10 @@
   width: 100px;
   height: 100px;
 }
+
+nav ul li a:hover {
+  color:white;
+}
+#menu:hover {
+  color:white;
+}

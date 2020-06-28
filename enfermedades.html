@@ -14,6 +14,8 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"> </script>
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"> </script>
       <!--Fin bootstrap-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
       <!--Materialize-->
       <link rel="stylesheet" href="css/materialize.min.css">
       <script src="js/materialize.min.js"></script>
@@ -37,39 +39,25 @@
    </head>
 
    <body>
-      <!-- Se crea la nav bar, la clase navbar-expand-sm expresa el punto esta desaparece y se convierte en boton
-      en este caso para small-->
-      <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
-         <a class="navbar-brand pl-5" href="#">
-            Psicologia
-         </a>
-         <!-- Inicio boton que se muestra en caso de que sea un celular -->
-         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-         </button>
-         <!-- Fin boton que se muestra en caso de que sea un celular -->
-         <!-- Inicio elementos secundarios navBar-->
-         <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-            <!--Inicio botones nav bar -->
-            <!-- ml-auto para ir a la derecha-->
-            <!-- pl, pt, pr paddings -->
-            <ul class="navbar-nav ml-auto pl-5 pr-5">
-               <li class="nav-item">
-                  <a class="nav-link" href="index.html">Inicio</a>
-               </li>
-               <li class="nav-item">
-                  <a class="nav-link" href="enfermedades.html" id="btnEnfermedades">
-                     Enfermedades
-                  </a>
-               </li>
-               <li class="nav-item">
-                  <a class="nav-link" href="#">Contactenos</a>
-               </li>
+      <nav class="grey darken-3">
+         <div class="nav-wrapper">
+            <a href="#" class="pl-5 brand-logo">Psicologia</a>
+            <a href="#" class="sidenav-trigger" data-target="mobile">
+               <i id="menu" class="material-icons">menu</i>
+            </a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down pr-5">
+               <li><a href="index.html">Inicio</a></li>
+               <li><a href="#">Enfermedades</a></li>
+               <li><a href="index.html">Contactenos</a></li>
             </ul>
-            <!-- Fin botones navBar -->
          </div>
-         <!-- Fin elementos secundarios navBar-->
       </nav>
+
+      <ul id="mobile" class="sidenav">
+         <li><a href="index.html">Inicio</a></li>
+         <li><a href="#">Enfermedades</a></li>
+         <li><a href="index.html">Contactenos</a></li>
+      </ul>
       <div class="container">
          <div class="row">
             <div class="col-sm-4">

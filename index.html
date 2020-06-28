@@ -10,7 +10,7 @@
       <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"> </script>
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"> </script>
-
+      <script src="js/efectos.js" charset="utf-8"></script>
 
       <title>Psicologia</title>
    </head>
@@ -145,72 +145,72 @@
       </div>
       <!-- Footer -->
       <footer class="text-muted bg-dark ">
-         <div class="container  ">
-            <div class="text-white ">
-               <div class="row">
-                  <!-- Inicio mitad de ingreso de datos de contacto -->
-                  <div class="col col-md-7 col-sm-12 col-12 pt-3 ">
-                     <div class="row text-center pb-3">
-                        <div class="col col-md-12">
-                           <h3><b>Contáctanos</b></h3>
-                        </div>
+         <div class="container">
+            <div class="row">
+               <div class="col col-md-8 col-sm-12 col-12">
+                  <div class="container text-white pt-4">
+                     <div class="h3 text-center pb-3">
+                        Contactanos!
                      </div>
-                     <div class="row p-2">
-                        <div class="text-center col col-md-3 col-sm-12 col-12">
-                           Nombre
+                     <form>
+                        <div class="form-group row">
+                           <label for="inputPassword" class="col-sm-2 col-form-label">Nombre</label>
+                           <div class="col-sm-10">
+                              <input id="btnContactoNombre" class="form-control" type="text" placeholder="Jaime Rojas">
+                              <div class="valid-feedback">
+                                 Perfecto!
+                              </div>
+                              <div class="invalid-feedback">
+                                 Cual es tu nombre?
+                              </div>
+                           </div>
                         </div>
-                        <div class="col col-md-9 col-sm-12 col-12">
-                           <form class="form-group">
-                              <input class="form-control" type="text" placeholder="Jaime Rojas">
-                           </form>
+                        <div class="form-group row">
+                           <label for="inputPassword" class="col-sm-2 col-form-label">Correo</label>
+                           <div class="col-sm-10">
+                              <input id="btnContactoCorreo" class="form-control" type="text" placeholder="jaimito1223@gmail.com">
+                              <div class="valid-feedback">
+                                 Perfecto!
+                              </div>
+                              <div class="invalid-feedback">
+                                 Tu correo es invalido, verificalo porfavor
+                              </div>
+                           </div>
                         </div>
-                     </div>
-                     <div class="row p-2">
-                        <div class="text-center col col-md-3 col-sm-12 col-12">
-                           Correo
+                        <div class="form-group row">
+                           <label for="inputPassword" class="col-sm-2 col-form-label">Por que estas interesado/a?</label>
+                           <div class="col-sm-10">
+                              <input id="btnContactoInteres" class="form-control cajaTextoAlta" type="text" placeholder="Me apasiona la psicolgia">
+                              <div class="valid-feedback">
+                                 Perfecto!
+                              </div>
+                              <div class="invalid-feedback">
+                                 Cuentanos tu interes!
+                              </div>
+                           </div>
                         </div>
-                        <div class="col col-md-9 col-sm-12 col-12">
-                           <form class="form-group">
-                              <input class="form-control" type="text" placeholder="jaimito1223@gmail.com">
-                           </form>
+                        <div class="pl-5 pr-5">
+                           <button type="button" class="btn btn-success btn-block">Enviar</button>
                         </div>
-                     </div>
-                     <div class="row p-2">
-                        <div class="text-center col col-md-3 col-sm-12 col-12">
-                           Por que estas interesado
-                        </div>
-                        <div class="col col-md-9 col-sm-12 col-12">
-                           <form class="form-group">
-                              <input class="form-control  cajaTextoAlta" type="text" placeholder="Me apasiona la psicolgia">
-                              <i class="fas fa-search" aria-hidden="true"></i>
-                           </form>
-                        </div>
-                     </div>
+                     </form>
                   </div>
-                  <!--Fin mitad contacto-->
-                  <!-- inicio disenador -->
-                  <div class=" pt-5 col col-md-4 col-sm-12 col-12">
-                     <div class="row pt-3">
-                        <div class="col col-md-12 pt-5 text-center">
-                           <h5>Realizado por xxxxxx xxxxxx xxxxxxxx</h5>
-                        </div>
-                     </div>
-                     <div class="row">
-                        <div class="col col-md-12 pt-2 text-center">
-                           <h5>Universidad xxxxxx xxxxxx</h5>
-                        </div>
-                     </div>
-                     <div class="row">
-                        <div class="col col-md-12 pt-2 text-center">
-                           <h5>Anio 2020</h5>
-                        </div>
-                     </div>
+               </div>
+               <div class="col col-md-4 col-sm-12 col-12 p-5 text-center text-white">
+                  <div class="h5 p-3">
+                     Realizado por <br>
+                     xxxxxx xxxxxx xxxxx xxx
+
                   </div>
-                  <!-- Fin mitad datos de contacto -->
+                  <div class="h5 p-3">
+                     Universidad xxxxxxx xxxxxx
+                  </div>
+                  <div class="h5 p-3">
+                     Anio 2020
+                  </div>
                </div>
             </div>
-
          </div>
+
       </footer>
    </body>
 

@@ -5,17 +5,33 @@
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+      <!--Jquery -->
+      <script src="js/jquery-3.5.1.js"></script>
+      <!--Fin Jquery -->
+      <!--CDN bootstrap-->
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-      <link rel="stylesheet" href="css/estilos.css">
-      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"> </script>
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"> </script>
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+      <!--Fin bootstrap-->
+      <!--Materialize-->
+      <link rel="stylesheet" href="css/materialize.min.css">
+      <script src="js/materialize.min.js"></script>
+      <!-- Fin materialize-->
 
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+      <!-- Estilos pagina principal -->
+      <link rel="stylesheet" href="css/estilos.css">
+      <!-- Fin estilos pagina principal -->
+      <!--Estilos pagina enfermedades -->
+      <link rel="stylesheet" href="css/mentalStyle.css">
+      <link rel="stylesheet" href="css/card.css">
+      <!-- Fin estilos pagina enfermedades-->
+      <!--JS rotacion de la ficha 1-->
+      <script src="js/rotacionFicha.js" charset="utf-8"></script>
+      <!-- Fin js rotacion-->
 
+      <!--JS abrir cuando el mouse pasa-->
+      <script src="js/efectos.js" charset="utf-8"></script>
 
       <title>Psicologia</title>
    </head>
@@ -39,7 +55,7 @@
             <!-- pl, pt, pr paddings -->
             <ul class="navbar-nav ml-auto pl-5 pr-5">
                <li class="nav-item">
-                  <a class="nav-link" href="#">Inicio</a>
+                  <a class="nav-link" href="index.html">Inicio</a>
                </li>
                <li class="nav-item">
                   <a class="nav-link" href="enfermedades.html" id="btnEnfermedades">
@@ -54,6 +70,66 @@
          </div>
          <!-- Fin elementos secundarios navBar-->
       </nav>
+
+      <div class="container">
+         <div class="row">
+            <div class="col col-md-4">
+               <div id="tarjeta" class="tarjeta triggerGiro">
+                  <div class="tarjeta__face tarjeta__face--front">
+                     <div class="card  hoverable">
+                        <div class="card-image">
+                           <img class="" src="img/imagen1.jpg">
+                        </div>
+                        <div class="card-content">
+                           <h4 class="">Enfermedad 1</h4>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="tarjeta__face tarjeta__face--back ">
+                     <div class="card blue-grey darken-1 hoverable">
+                        <div class="card-content white-text">
+                           <span class="card-title">Que es</span>
+                           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci delectus, tempora nisi iste provident soluta tempore quaerat recusandae officia non dolore, reprehenderit aut harum enim error quidem. In ratione,
+                           voluptates.
+                           <span class="card-title">Caraceristicas</span>
+                           <ul>
+                              <li>Hay muchas teorías vigentes</li>
+                              <li>Posee distintas ramas o ángulos de atención</li>
+                              <li>Utiliza la correlación</li>
+                              <li>Separó los enfoques en ciertas patologías</li>
+                              <li>Se vale de la observación</li>
+                              <li>Difiere de la psiquiatría</li>
+                           </ul>
+                        </div>
+
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="col col-md-5 ">
+               <div class="card hoverable ">
+                  <div class="card-image waves-effect waves-block waves-light">
+                     <img class="activator" src="img/imagen1.jpg">
+                  </div>
+                  <div class="card-content triggerAparicion">
+                     <span id="txtTituloEnfermedad2" class="card-title activator grey-text text-darken-4">Enfermedad 2</span>
+                  </div>
+                  <div class="card-reveal">
+                     <span if="txtTituloEnfermedad2Interior" class="card-title grey-text text-darken-4">Enfermedad 2 <i class="material-icons right text-danger">X</i></span>
+                     <p>La enfermda 2 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        Recusandae repellat, quasi optio voluptates earum inventore omnis minima
+                        quod assumenda non ipsum debitis pariatur est repudiandae doloribus consequatur!
+                        Dolor, reprehenderit enim!</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <button id="btnVolverPaginaPrincipal" class="btn waves-effect waves-light">
+            Volver a la pagina principal
+         </button>
+
+
    </body>
 
 </html>

@@ -1,6 +1,5 @@
 $(function() {
- /*Inicializacion sidenav para enfermedades en moviles*/
- $('.sidenav').sidenav();
+
  /*Redirecciones*/
  $("#btnVolverPaginaPrincipal").click(function() {
   window.location = "index.html";
@@ -34,6 +33,13 @@ $(function() {
   if ($('#btnContactoInteres').val()) {
    contador = setTimeout(validarContactoInteres, tiempoValidacion);
   }
+ });
+
+ /*IR al final de la pagina*/
+ $('#btnContactenos').click(function(){
+   $('html, body').animate({
+       scrollTop: $('#endOfPage').offset().top
+   }, 1000);
  });
 });
 

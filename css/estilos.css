@@ -1,3 +1,6 @@
+.body{
+  height: 2000px;
+}
 /*Para que un cuadro texto tenga mayor alto*/
 .cajaTextoAlta {
   height: 120px;

@@ -2,15 +2,20 @@
 $(function () {
 
     /*Triggers para la carta de giro*/
-    $(".triggerGiro").mouseenter(function () {
+    $("#enfermedad1").mouseenter(function () {
         $(this).trigger('click');
     });
-    $(".triggerGiro").mouseleave(function () {
+    $("#enfermedad1").mouseleave(function () {
+        $(this).trigger('click');
+    });
+    $("#enfermedad2").mouseenter(function () {
+        $(this).trigger('click');
+    });
+    $("#enfermedad2").mouseleave(function () {
         $(this).trigger('click');
     });
     /*Fin triggers carta de giro*/
     /*Triggers para la carta de giro*/
-    contador = 2;
     $(".triggerAparicion").mouseenter(function () {
       console.log(contador);
       $("#txtTituloEnfermedad2").trigger('click');

@@ -1,5 +1,6 @@
 
 $(function () {
+
     /*Triggers para la carta de giro*/
     $(".triggerGiro").mouseenter(function () {
         $(this).trigger('click');

@@ -7,6 +7,10 @@ nav ul li a:hover {
   color:white;
 }
 
+/*Padding tarjetas puras materialize*/
+.paddingTarjeta{
+  padding: 3px;
+}
 /*Rotaciones*/
 .card-flip > div {
   backface-visibility: hidden;

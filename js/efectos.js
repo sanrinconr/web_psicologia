@@ -59,7 +59,6 @@ $(function() {
 function validarContactoNombre() {
  $("#btnContactoNombre").removeClass("is-valid is-invalid").addClass("is-valid");
 }
-
 function validarContactoEmail() {
  if (validateEmail($("#btnContactoCorreo").val())) {
   $("#btnContactoCorreo").removeClass("is-valid is-invalid").addClass("is-valid");
@@ -67,7 +66,6 @@ function validarContactoEmail() {
   $("#btnContactoCorreo").removeClass("is-valid is-invalid").addClass("is-invalid");
  }
 }
-
 function validarContactoInteres() {
  $("#btnContactoInteres").removeClass("is-valid is-invalid").addClass("is-valid");
 }
@@ -78,6 +76,7 @@ function validateEmail(email) {
  return re.test(email);
 }
 
+/*Desplazarse a una parte de pagina (el contactenos)*/
 function desplazamientoContactenos(){
   $('html, body').animate({
    scrollTop: $('#endOfPage').offset().top

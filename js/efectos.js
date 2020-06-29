@@ -8,9 +8,11 @@ $(function() {
   return decodeURI(results[1]) || 0;
  }
 
+ /*Si el parametro get de vista es contactenos*/
  if($.urlParam('vista') == "contactenos"){
    desplazamientoContactenos();
  }
+
  /*Redirecciones*/
  $("#btnVolverPaginaPrincipal").click(function() {
   window.location = "index.html";
@@ -20,6 +22,7 @@ $(function() {
  });
 });
 
+/*Formulario*/
 $(function() {
  /*Validaciones js formulario contacto*/
  //setup before functions

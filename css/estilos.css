@@ -72,3 +72,16 @@
 .titulo{
   font-size: 24px;
 }
+.espaciado{
+  padding-left: 8px;
+  padding-right: 8px;
+}
+.paddingItems{
+  margin-right: 19px;
+}
+.paddingTitulo{
+  margin-top: -7px;
+  margin-left: -19px;
+
+
+}

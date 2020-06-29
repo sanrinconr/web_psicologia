@@ -2237,7 +2237,12 @@ pre {
  * 1. Remove the gray background on active links in IE 10.
  * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
  */
-
+a {
+  background-color: transparent;
+  /* 1 */
+  -webkit-text-decoration-skip: objects;
+  /* 2 */
+}
 
 /**
  * 1. Remove the bottom border in Chrome 57- and Firefox 39-.
@@ -2591,8 +2596,20 @@ textarea {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 }
 
+ul:not(.browser-default) {
+  padding-left: 0;
+  list-style-type: none;
+}
 
+ul:not(.browser-default) > li {
+  list-style-type: none;
+}
 
+a {
+  color: #039be5;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
 
 .valign-wrapper {
   display: -webkit-box;
@@ -3086,8 +3103,8 @@ td, th {
 .collection .collection-item.avatar:not(.circle-clipper) > .circle,
 .collection .collection-item.avatar :not(.circle-clipper) > .circle {
   position: absolute;
-  width: 48px;
-  height: 48px;
+  width: 42px;
+  height: 42px;
   overflow: hidden;
   left: 15px;
   display: inline-block;
@@ -3096,7 +3113,7 @@ td, th {
 
 .collection .collection-item.avatar i.circle {
   font-size: 18px;
-  line-height: 48px;
+  line-height: 42px;
   color: #fff;
   background-color: #999;
   text-align: center;
@@ -3376,7 +3393,14 @@ span.badge[data-badge-caption]::after {
   content: " " attr(data-badge-caption);
 }
 
-
+nav ul a span.badge {
+  display: inline-block;
+  float: none;
+  margin-left: 4px;
+  line-height: 22px;
+  height: 22px;
+  -webkit-font-smoothing: auto;
+}
 
 .collection-item span.badge {
   margin-top: calc(0.75rem - 11px);
@@ -4245,7 +4269,197 @@ table span.badge {
   }
 }
 
+nav {
+  color: #fff;
+  background-color: #ee6e73;
+  width: 100%;
+  height: 56px;
+  line-height: 56px;
+}
 
+nav.nav-extended {
+  height: auto;
+}
+
+nav.nav-extended .nav-wrapper {
+  min-height: 56px;
+  height: auto;
+}
+
+nav.nav-extended .nav-content {
+  position: relative;
+  line-height: normal;
+}
+
+nav a {
+  color: #fff;
+}
+
+nav i,
+nav [class^="mdi-"], nav [class*="mdi-"],
+nav i.material-icons {
+  display: block;
+  font-size: 24px;
+  height: 56px;
+  line-height: 56px;
+}
+
+nav .nav-wrapper {
+  position: relative;
+  height: 100%;
+}
+
+@media only screen and (min-width: 993px) {
+  nav a.sidenav-trigger {
+    display: none;
+  }
+}
+
+nav .sidenav-trigger {
+  float: left;
+  position: relative;
+  z-index: 1;
+  height: 56px;
+  margin: 0 18px;
+}
+
+nav .sidenav-trigger i {
+  height: 56px;
+  line-height: 56px;
+}
+
+nav .brand-logo {
+  position: absolute;
+  color: #fff;
+  display: inline-block;
+  font-size: 2.1rem;
+  padding: 0;
+}
+
+nav .brand-logo.center {
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+@media only screen and (max-width: 992px) {
+  nav .brand-logo {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+  nav .brand-logo.left, nav .brand-logo.right {
+    padding: 0;
+    -webkit-transform: none;
+            transform: none;
+  }
+  nav .brand-logo.left {
+    left: 0.5rem;
+  }
+  nav .brand-logo.right {
+    right: 0.5rem;
+    left: auto;
+  }
+}
+
+nav .brand-logo.right {
+  right: 0.5rem;
+  padding: 0;
+}
+
+nav .brand-logo i,
+nav .brand-logo [class^="mdi-"], nav .brand-logo [class*="mdi-"],
+nav .brand-logo i.material-icons {
+  float: left;
+  margin-right: 15px;
+}
+
+nav .nav-title {
+  display: inline-block;
+  font-size: 32px;
+  padding: 28px 0;
+}
+
+nav ul {
+  margin: 0;
+}
+
+nav ul li {
+  -webkit-transition: background-color .3s;
+  transition: background-color .3s;
+  float: left;
+  padding: 0;
+}
+
+nav ul li.active {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+nav ul a {
+  -webkit-transition: background-color .3s;
+  transition: background-color .3s;
+  font-size: 1rem;
+  color: #fff;
+  display: block;
+  padding: 0 15px;
+  cursor: pointer;
+}
+
+nav ul a.btn, nav ul a.btn-large, nav ul a.btn-small, nav ul a.btn-large, nav ul a.btn-flat, nav ul a.btn-floating {
+  margin-top: -2px;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+nav ul a.btn > .material-icons, nav ul a.btn-large > .material-icons, nav ul a.btn-small > .material-icons, nav ul a.btn-large > .material-icons, nav ul a.btn-flat > .material-icons, nav ul a.btn-floating > .material-icons {
+  height: inherit;
+  line-height: inherit;
+}
+
+nav ul a:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+nav ul.left {
+  float: left;
+}
+
+nav form {
+  height: 100%;
+}
+
+nav .input-field {
+  margin: 0;
+  height: 100%;
+}
+
+nav .input-field input {
+  height: 100%;
+  font-size: 1.2rem;
+  border: none;
+  padding-left: 2rem;
+}
+
+nav .input-field input:focus, nav .input-field input[type=text]:valid, nav .input-field input[type=password]:valid, nav .input-field input[type=email]:valid, nav .input-field input[type=url]:valid, nav .input-field input[type=date]:valid {
+  border: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+nav .input-field label {
+  top: 0;
+  left: 0;
+}
+
+nav .input-field label i {
+  color: rgba(255, 255, 255, 0.7);
+  -webkit-transition: color .3s;
+  transition: color .3s;
+}
+
+nav .input-field label.active i {
+  color: #fff;
+}
 
 .navbar-fixed {
   position: relative;
@@ -4253,7 +4467,22 @@ table span.badge {
   z-index: 997;
 }
 
+.navbar-fixed nav {
+  position: fixed;
+}
 
+@media only screen and (min-width: 601px) {
+  nav.nav-extended .nav-wrapper {
+    min-height: 64px;
+  }
+  nav, nav .nav-wrapper i, nav a.sidenav-trigger, nav a.sidenav-trigger i {
+    height: 64px;
+    line-height: 64px;
+  }
+  .navbar-fixed {
+    height: 64px;
+  }
+}
 
 a {
   text-decoration: none;
@@ -4924,7 +5153,7 @@ small {
 .backdrop {
   position: absolute;
   opacity: 0;
-  height: 8px;
+  height: 7px;
   width: 14px;
   border-radius: 0 0 50% 50%;
   background-color: #323232;
@@ -5214,7 +5443,19 @@ button.btn-floating {
   transition: none;
 }
 
-
+.fixed-action-btn.toolbar ul li a {
+  display: block;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  color: #fff;
+  line-height: 56px;
+  z-index: 1;
+}
 
 .fixed-action-btn.toolbar ul li a i {
   line-height: inherit;
@@ -7123,7 +7364,7 @@ input[type=range] + .thumb {
   width: 0;
   border-radius: 50%;
   background-color: #26a69a;
-  margin-left: 8px;
+  margin-left: 7px;
   -webkit-transform-origin: 50% 50%;
           transform-origin: 50% 50%;
   -webkit-transform: rotate(-45deg);
@@ -8117,6 +8358,98 @@ input[type=range]::-ms-thumb {
   background-color: #4CAF50;
 }
 
+.carousel {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 400px;
+  -webkit-perspective: 500px;
+          perspective: 500px;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform-origin: 0% 50%;
+          transform-origin: 0% 50%;
+}
+
+.carousel.carousel-slider {
+  top: 0;
+  left: 0;
+}
+
+.carousel.carousel-slider .carousel-fixed-item {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 20px;
+  z-index: 1;
+}
+
+.carousel.carousel-slider .carousel-fixed-item.with-indicators {
+  bottom: 68px;
+}
+
+.carousel.carousel-slider .carousel-item {
+  width: 100%;
+  height: 100%;
+  min-height: 400px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.carousel.carousel-slider .carousel-item h2 {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 32px;
+}
+
+.carousel.carousel-slider .carousel-item p {
+  font-size: 15px;
+}
+
+.carousel .carousel-item {
+  visibility: hidden;
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.carousel .carousel-item > img {
+  width: 100%;
+}
+
+.carousel .indicators {
+  position: absolute;
+  text-align: center;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0;
+}
+
+.carousel .indicators .indicator-item {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  height: 8px;
+  width: 8px;
+  margin: 24px 4px;
+  background-color: rgba(255, 255, 255, 0.5);
+  -webkit-transition: background-color .3s;
+  transition: background-color .3s;
+  border-radius: 50%;
+}
+
+.carousel .indicators .indicator-item.active {
+  background-color: #fff;
+}
+
+.carousel.scrolling .carousel-item .materialboxed,
+.carousel .carousel-item:not(.active) .materialboxed {
+  pointer-events: none;
+}
 
 .tap-target-wrapper {
   width: 800px;

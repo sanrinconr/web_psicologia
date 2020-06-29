@@ -9,6 +9,10 @@
       <!--Jquery -->
       <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
       <!--Fin Jquery -->
+      <!--Materialize-->
+      <link rel="stylesheet" href="css/materialize.css">
+      <script src="js/materialize.min.js"></script>
+      <!-- Fin materialize-->
       <!--CDN bootstrap-->
       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"> </script>
@@ -16,10 +20,7 @@
       <!--Fin bootstrap-->
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-      <!--Materialize-->
-      <link rel="stylesheet" href="css/materialize.css">
-      <script src="js/materialize.min.js"></script>
-      <!-- Fin materialize-->
+
 
       <!-- Estilos pagina principal -->
       <link rel="stylesheet" href="css/estilos.css">
@@ -37,39 +38,29 @@
    </head>
 
    <body>
-      <!-- Se crea la nav bar, la clase navbar-expand-sm expresa el punto esta desaparece y se convierte en boton
-     en este caso para small-->
-      <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
-         <a class="text-white pl-5 titulo" href="#">
-            Psicologia
-         </a>
-         <!-- Inicio boton que se muestra en caso de que sea un celular -->
-         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-         </button>
-         <!-- Fin boton que se muestra en caso de que sea un celular -->
-         <!-- Inicio elementos secundarios navBar-->
-         <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-            <!--Inicio botones nav bar -->
-            <!-- ml-auto para ir a la derecha-->
-            <!-- pl, pt, pr paddings -->
-            <ul class="navbar-nav ml-auto pl-5 pr-5">
-               <li class="nav-item">
-                  <a class="nav-link text-white textoGrande" href="index.html">Inicio</a>
-               </li>
-               <li class="nav-item">
-                  <a class="nav-link text-white textoGrande" href="enfermedades.html" id="btnEnfermedades">
-                     Enfermedades
-                  </a>
-               </li>
-               <li class="nav-item ">
-                  <a id="btnContactenos" class="nav-link text-white textoGrande" href="#">Contactenos</a>
-               </li>
+      <nav class="navbar-dark bg-dark ">
+         <div class="nav-wrapper ">
+            <a href="index.html" class="pl-5 h3 ">
+               <span class="text-white titulo ">Psicologia</span>
+            </a>
+
+            <ul id="nav-mobile" class="paddingItems right hide-on-med-and-down pr-5 text-white ">
+               <li><a class="nav-item textoGrande espaciado" href="index.html">Inicio</a></li>
+               <li><a class="nav-item textoGrande espaciado" href="#">Enfermedades</a></li>
+               <li><a class="nav-item textoGrande espaciado" href="index.html?vista=contactenos">Contactenos</a></li>
             </ul>
-            <!-- Fin botones navBar -->
+            <a href="#" class="right sidenav-trigger" data-target="mobile">
+               <i id="menu" class="material-icons">menu</i>
+            </a>
          </div>
-         <!-- Fin elementos secundarios navBar-->
       </nav>
+      <ul id="mobile" class="right sidenav ">
+         <li><a href="index.html">Inicio</a></li>
+         <li><a href="#">Enfermedades</a></li>
+         <li><a href="index.html">Contactenos</a></li>
+      </ul>
+
+
 
 
 

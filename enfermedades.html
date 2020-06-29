@@ -17,7 +17,7 @@
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
       <!--Materialize-->
-      <link rel="stylesheet" href="css/materialize.min.css">
+      <link rel="stylesheet" href="css/materialize.css">
       <script src="js/materialize.min.js"></script>
       <!-- Fin materialize-->
 
@@ -37,28 +37,41 @@
    </head>
 
    <body>
-      <nav class="navbar-dark bg-dark ">
-         <div class="nav-wrapper">
-            <a href="index.html" class="pl-5 h3">
-               <span class="text-white">Psicologia</span>
-            </a>
-
-            <ul id="nav-mobile" class="right hide-on-med-and-down pr-5 text-white">
-               <li><a class="nav-item" href="index.html">Inicio</a></li>
-               <li><a href="#">Enfermedades</a></li>
-               <li><a href="index.html?vista=contactenos">Contactenos</a></li>
+      <!-- Se crea la nav bar, la clase navbar-expand-sm expresa el punto esta desaparece y se convierte en boton
+     en este caso para small-->
+      <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+         <a class="text-white pl-5 titulo" href="#">
+            Psicologia
+         </a>
+         <!-- Inicio boton que se muestra en caso de que sea un celular -->
+         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+         </button>
+         <!-- Fin boton que se muestra en caso de que sea un celular -->
+         <!-- Inicio elementos secundarios navBar-->
+         <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <!--Inicio botones nav bar -->
+            <!-- ml-auto para ir a la derecha-->
+            <!-- pl, pt, pr paddings -->
+            <ul class="navbar-nav ml-auto pl-5 pr-5">
+               <li class="nav-item">
+                  <a class="nav-link text-white textoGrande" href="index.html">Inicio</a>
+               </li>
+               <li class="nav-item">
+                  <a class="nav-link text-white textoGrande" href="enfermedades.html" id="btnEnfermedades">
+                     Enfermedades
+                  </a>
+               </li>
+               <li class="nav-item ">
+                  <a id="btnContactenos" class="nav-link text-white textoGrande" href="#">Contactenos</a>
+               </li>
             </ul>
-            <a href="#" class="right sidenav-trigger" data-target="mobile">
-               <i id="menu" class="material-icons">menu</i>
-            </a>
+            <!-- Fin botones navBar -->
          </div>
+         <!-- Fin elementos secundarios navBar-->
       </nav>
 
-      <ul id="mobile" class="right sidenav ">
-         <li><a href="index.html">Inicio</a></li>
-         <li><a href="#">Enfermedades</a></li>
-         <li><a href="index.html">Contactenos</a></li>
-      </ul>
+
 
       <div class="row pt-5 pl-5 pr-5">
          <div class="col col-md-4 ">

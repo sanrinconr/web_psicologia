@@ -65,3 +65,10 @@
   top: 0;
   width: 100%;
 }
+
+.textoGrande {
+  font-size: 16px;
+}
+.titulo{
+  font-size: 24px;
+}
